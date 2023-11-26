@@ -2,7 +2,7 @@
 
 This is a script to assign 192 cancer and non-cancer samples onto two Illumina Infinium MethylationEPIC plates (epigenetic array plates) in a way that optimises the balance between several clinical and lifestyle covariates.
 
-This script is used after executing the CaseControlMatching.R script, that finds 192 matched case-controls from each of the groups in our cohort: 2 cancer groups (adenocarcinoma and high-grade dysplasia, and 4 controls ("normals", healthy volunteers, non-dysplastic Barrett's and intramucosal).
+This script is used after executing the CaseControlMatching.R script, that finds 192 matched case-controls from each of the groups in our cohort: 3 cancer groups (adenocarcinoma, intramucosal and high-grade dysplasia, and 3 controls ("normals", healthy volunteers, non-dysplastic Barrett's esophagus).
 
 The motivation for this analysis was to disassociate the huge batch effect of the epigenetic plates from the clinical covariates. We would be using stringent batch correction for the technical variables, which are the two plates, plus the individual rows of the plate. This removal is achieved by means of the residuals of a fitted linear model, we would preserve the clinical covariates so that they could be investigated controlled for and investigated seperately. This is therefore a script that seperates out the main (uninteresting) technical covariate from the more interesting clinical and lifestyle covariates. 
 
